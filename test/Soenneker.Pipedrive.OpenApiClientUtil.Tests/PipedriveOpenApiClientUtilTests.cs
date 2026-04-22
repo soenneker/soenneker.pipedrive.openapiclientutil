@@ -1,20 +1,19 @@
 using Soenneker.Pipedrive.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Pipedrive.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class PipedriveOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class PipedriveOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IPipedriveOpenApiClientUtil _openapiclientutil;
 
-    public PipedriveOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public PipedriveOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IPipedriveOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
