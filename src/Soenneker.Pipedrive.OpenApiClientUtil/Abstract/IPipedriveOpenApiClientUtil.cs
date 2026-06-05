@@ -10,5 +10,10 @@ namespace Soenneker.Pipedrive.OpenApiClientUtil.Abstract;
 /// </summary>
 public interface IPipedriveOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
+    /// <summary>
+    /// Gets the value.
+    /// </summary>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A task containing the result of the operation.</returns>
     ValueTask<PipedriveOpenApiClient> Get(CancellationToken cancellationToken = default);
 }
