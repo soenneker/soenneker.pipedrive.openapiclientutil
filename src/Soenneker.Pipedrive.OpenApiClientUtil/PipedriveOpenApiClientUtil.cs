@@ -30,7 +30,7 @@ public sealed class PipedriveOpenApiClientUtil : IPipedriveOpenApiClientUtil
 
     private async ValueTask<PipedriveOpenApiClient> CreateClient(string apiKey, CancellationToken token)
     {
-        HttpClient httpClient = await _httpClientUtil.Get(token).NoSync();
+        HttpClient httpClient = await _httpClientUtil.Get(apiKey, token).NoSync();
 
         string authHeaderName = _configuration["Pipedrive:AuthHeaderName"] ?? "Authorization";
         string authHeaderValueTemplate = _configuration["Pipedrive:AuthHeaderValueTemplate"] ?? "Bearer {token}";
