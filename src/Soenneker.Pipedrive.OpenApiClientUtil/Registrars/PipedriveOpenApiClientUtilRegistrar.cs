@@ -6,7 +6,7 @@ using Soenneker.Pipedrive.OpenApiClientUtil.Abstract;
 namespace Soenneker.Pipedrive.OpenApiClientUtil.Registrars;
 
 /// <summary>
-/// Registers the OpenAPI client utility for dependency injection.
+/// Registers the Pipedrive API client provider.
 /// </summary>
 public static class PipedriveOpenApiClientUtilRegistrar
 {
