@@ -13,6 +13,7 @@ using Soenneker.Pipedrive.OpenApiClient;
 
 namespace Soenneker.Pipedrive.OpenApiClientUtil;
 
+/// <inheritdoc cref="IPipedriveOpenApiClientUtil" />
 public sealed class PipedriveOpenApiClientUtil : IPipedriveOpenApiClientUtil
 {
     private readonly SingletonDictionary<PipedriveOpenApiClient> _clients;
