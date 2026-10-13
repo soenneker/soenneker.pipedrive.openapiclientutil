@@ -41,7 +41,7 @@ public sealed class PipedriveOpenApiClientUtil : IPipedriveOpenApiClientUtil
 
     public ValueTask<PipedriveOpenApiClient> Get(CancellationToken cancellationToken = default)
     {
-        var apiKey = _configuration.GetValueStrict<string>("Pipedrive:ApiKey");
+        var apiKey = _configuration.GetStringStrict("Pipedrive:ApiKey");
 
         return Get(apiKey, cancellationToken);
     }
