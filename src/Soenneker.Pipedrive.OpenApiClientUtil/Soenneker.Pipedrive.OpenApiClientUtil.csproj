@@ -44,6 +44,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Pipedrive.HttpClients" Version="4.0.173" />
-        <PackageReference Include="Soenneker.Pipedrive.OpenApiClient" Version="4.0.74" />
+        <PackageReference Include="Soenneker.Pipedrive.OpenApiClient" Version="4.0.75" />
     </ItemGroup>
 </Project>
